@@ -17,3 +17,12 @@ tasks {
         gradleVersion = "7.3"
     }
 }
+
+dependencies {
+    implementation("org.junit.jupiter:junit-jupiter:5.7.0")
+    testImplementation(kotlin("test"))
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
