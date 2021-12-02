@@ -16,5 +16,13 @@ class Day01 {
             .zipWithNext()
             .count { (prev, next) -> next > prev }
     }
+
+    fun part2Better(input: List<String>): Int {
+        val windowSize = 3
+        val depths = input.map { it.toInt() }
+
+        return depths.windowed(windowSize + 1)
+            .count { it[3] > it[0] }
+    }
 }
 
